@@ -33,7 +33,7 @@
 
 ###
 
-![snake gif](https://github.com/josemgarciar/josemgarciar/blob/output/github-snake-dark.svg)
+![snake gif](https://github.com/josemgarciar/josemgarciar/blob/output/snake.svg)
 
 ###
 
