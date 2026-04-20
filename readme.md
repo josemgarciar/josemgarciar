@@ -34,7 +34,7 @@ I’m always open to discovering new technologies and expanding my knowledge. I 
 ### :inbox_tray: Contact with me:
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/jose-manuel-6318361ab/" target="_blank">
+  <a href="https://www.linkedin.com/in/josemgarciar/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
   </a>
   <a href="https://discord.com/channels/@josemgarx" target="_blank">
