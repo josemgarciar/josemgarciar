@@ -126,7 +126,51 @@ async function listRepositories(owner, token) {
   }
 }
 
-async function contributionStats(owner, from, token) {
+export function buildDateRanges(from, to, daysPerRange = 180) {
+  const ranges = [];
+  const end = new Date(to);
+  let start = new Date(from);
+  const rangeMilliseconds = daysPerRange * 24 * 60 * 60 * 1000;
+
+  while (start < end) {
+    const rangeEnd = new Date(Math.min(start.getTime() + rangeMilliseconds, end.getTime()));
+    ranges.push({ from: start.toISOString(), to: rangeEnd.toISOString() });
+    start = rangeEnd;
+  }
+  return ranges;
+}
+
+export function mergeContributionStats(collections) {
+  const repositories = new Map();
+  const totals = {
+    totalContributions: 0,
+    totalCommitContributions: 0,
+    totalIssueContributions: 0,
+    totalPullRequestContributions: 0,
+    totalPullRequestReviewContributions: 0,
+  };
+
+  for (const collection of collections) {
+    totals.totalContributions += collection.contributionCalendar.totalContributions;
+    totals.totalCommitContributions += collection.totalCommitContributions;
+    totals.totalIssueContributions += collection.totalIssueContributions;
+    totals.totalPullRequestContributions += collection.totalPullRequestContributions;
+    totals.totalPullRequestReviewContributions += collection.totalPullRequestReviewContributions;
+
+    for (const entry of collection.commitContributionsByRepository) {
+      if (!entry.repository) continue;
+      const existing = repositories.get(entry.repository.nameWithOwner);
+      repositories.set(entry.repository.nameWithOwner, {
+        repository: entry.repository,
+        contributions: { totalCount: (existing?.contributions.totalCount ?? 0) + entry.contributions.totalCount },
+      });
+    }
+  }
+
+  return { ...totals, commitContributionsByRepository: [...repositories.values()] };
+}
+
+async function contributionStats(owner, from, to, token) {
   const query = `query ProfileStats($login: String!, $from: DateTime!, $to: DateTime!) {
     user(login: $login) {
       contributionsCollection(from: $from, to: $to) {
@@ -145,7 +189,7 @@ async function contributionStats(owner, from, token) {
   const response = await fetch(`${API_ROOT}/graphql`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query, variables: { login: owner, from, to: new Date().toISOString() } }),
+    body: JSON.stringify({ query, variables: { login: owner, from, to } }),
   });
   if (!response.ok) throw new Error(`GitHub GraphQL returned ${response.status}`);
   const payload = await response.json();
@@ -153,12 +197,21 @@ async function contributionStats(owner, from, token) {
   return payload.data.user.contributionsCollection;
 }
 
+async function historicalContributionStats(owner, createdAt, token) {
+  const ranges = buildDateRanges(createdAt, new Date().toISOString());
+  const collections = [];
+  for (const range of ranges) {
+    collections.push(await contributionStats(owner, range.from, range.to, token));
+  }
+  return mergeContributionStats(collections);
+}
+
 export async function generate({ owner, token, outputDirectory }) {
   if (!owner || !token) throw new Error('GITHUB_REPOSITORY_OWNER and GITHUB_TOKEN are required.');
   const profile = await request(`${API_ROOT}/users/${owner}`, token);
   const repositories = (await listRepositories(owner, token)).filter((repository) => !repository.fork && !repository.archived);
   const languageMaps = await Promise.all(repositories.map((repository) => request(`${API_ROOT}/repos/${repository.full_name}/languages`, token)));
-  const stats = await contributionStats(owner, profile.created_at, token);
+  const stats = await historicalContributionStats(owner, profile.created_at, token);
 
   await mkdir(outputDirectory, { recursive: true });
   await Promise.all([
