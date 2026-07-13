@@ -11,8 +11,8 @@ I’m always open to discovering new technologies and expanding my knowledge. I 
 ### :chart_with_upwards_trend: My Stats:
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=josemgarciar&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=merko&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=josemgarciar&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=merko&hide_border=false&order=2" height="150" alt="languages graph"  />
+  <img src="./assets/github-stats.svg" height="190" alt="GitHub statistics" />
+  <img src="./assets/top-languages.svg" height="190" alt="Top programming languages" />
 </div>
 
 ##
@@ -24,7 +24,9 @@ I’m always open to discovering new technologies and expanding my knowledge. I 
 
 ##
 ### :top: Top Contributed Repo:
- ![](https://github-contributor-stats.vercel.app/api?username=josemgarciar&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<div align="center">
+  <img src="./assets/top-contributed-repos.svg" width="610" alt="Top contributed repositories by public commits" />
+</div>
 
 ##
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
