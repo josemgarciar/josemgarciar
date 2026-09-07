@@ -11,8 +11,8 @@
   <text x="360" y="91" fill="#8b949e" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" text-anchor="end">23%</text>
   <text x="24" y="118" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13">TypeScript</text>
   <rect x="137" y="107" width="140" height="8" rx="4" fill="#21262d"/>
-  <rect x="137" y="107" width="25" height="8" rx="4" fill="#3fb950"/>
-  <text x="360" y="118" fill="#8b949e" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" text-anchor="end">18%</text>
+  <rect x="137" y="107" width="24" height="8" rx="4" fill="#3fb950"/>
+  <text x="360" y="118" fill="#8b949e" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" text-anchor="end">17%</text>
   <text x="24" y="145" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13">Java</text>
   <rect x="137" y="134" width="140" height="8" rx="4" fill="#21262d"/>
   <rect x="137" y="134" width="10" height="8" rx="4" fill="#3fb950"/>
