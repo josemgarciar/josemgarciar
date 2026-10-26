@@ -2,14 +2,14 @@
   <rect width="100%" height="100%" rx="12" fill="#0d1117" stroke="#238636"/>
   <text x="24" y="32" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="18" font-weight="600">Top Contributed Repositories</text>
   <a href="https://github.com/FernandoTC18/Acme-ANS-C3"><text x="24" y="65" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">1. FernandoTC18/Acme-ANS-C3</text></a>
-  <text x="580" y="65" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">131 commits</text>
-  <a href="https://github.com/josemgarciar/NaturSur"><text x="24" y="92" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">2. josemgarciar/NaturSur</text></a>
-  <text x="580" y="92" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">23 commits</text>
+  <text x="580" y="65" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">53 commits</text>
+  <a href="https://github.com/josemgarciar/VideoMinerApplication"><text x="24" y="92" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">2. josemgarciar/VideoMinerApplication</text></a>
+  <text x="580" y="92" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">12 commits</text>
   <a href="https://github.com/josemgarciar/josemgarciar"><text x="24" y="119" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">3. josemgarciar/josemgarciar</text></a>
-  <text x="580" y="119" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">14 commits</text>
-  <a href="https://github.com/josemgarciar/AutommatedPlanning_LightsOut"><text x="24" y="146" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">4. josemgarciar/AutommatedPlanning_LightsOut</text></a>
-  <text x="580" y="146" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">12 commits</text>
-  <a href="https://github.com/josemgarciar/VideoMinerApplication"><text x="24" y="173" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">5. josemgarciar/VideoMinerApplication</text></a>
-  <text x="580" y="173" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">12 commits</text>
+  <text x="580" y="119" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">7 commits</text>
+  <a href="https://github.com/ISPP-G-10/bookmerang-backend"><text x="24" y="146" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">4. ISPP-G-10/bookmerang-backend</text></a>
+  <text x="580" y="146" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">5 commits</text>
+  <a href="https://github.com/ISPP-G-10/bookmerang-docs"><text x="24" y="173" fill="#e6edf3" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="14">5. ISPP-G-10/bookmerang-docs</text></a>
+  <text x="580" y="173" fill="#3fb950" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" font-weight="700" text-anchor="end">3 commits</text>
   <text x="24" y="190" fill="#8b949e" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="11">Public commits across all history</text>
 </svg>
